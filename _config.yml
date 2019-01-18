@@ -1,11 +1,11 @@
 # Site settings
-title: Andrej Karpathy blog
+title: Divish's blog
 email: 
-description: "Musings of a Computer Scientist."
+description: "Musings of a Data Scientist."
 baseurl: ""
 url: "http://karpathy.github.io"
-twitter_username: karpathy
-github_username:  karpathy
+twitter_username: divishdayal
+github_username:  divishdayal
 
 # Build settings
 markdown: kramdown
