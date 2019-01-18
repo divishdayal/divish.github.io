@@ -17,7 +17,7 @@ Inspired by the way humans read and understand text, Recurrent Neural Networks (
 
 An LSTM cell comprises of 3 gates to remember a part of inputs in the previous time steps.
 
-{% include image name="1.jpg" caption="Sharing my blog on LinkedIn" %}
+![useful image]({{site.url}}/images/1.jpg)
 
 Input Gate
 The input gate layer in the first equation below is a sigmoid layer to decide which values in the cell state would be updated. This results in i_t taking a value between 0 and 1, where a 0 means update no new information into the cell memory and vice versa for 1.
