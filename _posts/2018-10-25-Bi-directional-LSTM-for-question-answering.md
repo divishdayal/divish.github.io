@@ -17,7 +17,7 @@ Inspired by the way humans read and understand text, Recurrent Neural Networks (
 
 An LSTM cell comprises of 3 gates to remember a part of inputs in the previous time steps.
 
-![useful image]({{site.url}}/images/1.jpg)
+![useful image]({{site.url}}/images/Bi-directional-LSTM-for-question-answering-1.jpg)
 
 Input Gate
 The input gate layer in the first equation below is a sigmoid layer to decide which values in the cell state would be updated. This results in i_t taking a value between 0 and 1, where a 0 means update no new information into the cell memory and vice versa for 1.
@@ -64,7 +64,7 @@ The proposed Model
 
 The proposed model is shown in the following figure. As discussed above, the model uses Bi-directional LSTM to vectorize sentences. The input at each time step to the model is Glove 50-dimensional word embedding. The input sentences i.e. question and candidate answer posts are served as input to the model using these word embeddings.
 
-
+![useful image]({{site.url}}/images/Bi-directional-LSTM-for-question-answering-2.jpg)
 
 At each time step, the bi-directional LSTM gives 2 outputs – one from the forward moving LSTM cell and another from the backward moving LSTM cell. For the model proposed here, we concatenate the two vector outputs at each time step. For each output h_a(t) of the Answer encoding bi-directional LSTM, attention of the average-pooled question vector o_q is applied using the following equations :
 m_{a,q}(t) = W_{am}h_a(t) + W_{qm}o_q
@@ -79,7 +79,7 @@ L = max(0, m - s_{a+} + s_{a-})
 
 In the above equation, m is the margin which is a hyper-parameter to be set for the model, s_{a+} is the cosine similarity score for the question and the positive labeled answer for a question, and s_{a-} is the score with a negative labeled answer. Essentially, we want to train the model to be able to produce a score at-least more than the margin value. Hence, at each iteration, the model consumes a question, with a correct answer and a wrong answer to calculate loss and back-propagate the loss to respective trainable components of the model.
 
-
+![useful image]({{site.url}}/images/Bi-directional-LSTM-for-question-answering-3.jpg)
 
 For training the proposed model, we have used WikiQA dataset. The dataset has a total of 3047 questions with candidate answers. The source of this dataset is Bing query logs from the years 2010-11. For each question, our model forms a pair of wrong answer and correct answer to train the model. WikiQA has a variety of questions from no fixed domain, where each question has many candidate answers like the community question answering domain, thats why we chose this dataset. The questions in WikiQA have no particular domain, hence the proposed model learns the general features that ranks an answer for each question, which can later be transferred on our required domain of MOOC discussion fora.
 Model Parameters and Training
