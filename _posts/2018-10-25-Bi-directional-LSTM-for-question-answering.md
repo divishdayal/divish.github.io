@@ -1,3 +1,10 @@
+---
+layout: post
+title: My First Post
+date: 2016-03-18
+comments: true
+---
+
 # Bi-directional LSTM with attention for question answering (NLP)
 
 In this post, I’ll present a model I am currently working on during the course of my Bachelor’s thesis. In this post, a model to select the top answer for a question in community question answering forums is presented. The model here is largely inspired from “Improved Representation Learning for Question Answer Matching.” – Tan, Ming, et al.  and “Teaching machines to read and comprehend.”-Hermann, Karl Moritz, et al.
