@@ -20,7 +20,7 @@ An LSTM cell comprises of 3 gates to remember a part of inputs in the previous t
 Input Gate
 The input gate layer in the first equation below is a sigmoid layer to decide which values in the cell state would be updated. This results in i_t taking a value between 0 and 1, where a 0 means update no new information into the cell memory and vice versa for 1.
 
-i_t = \sigma( W_i . [h_{t-1} , x_t] + b_i )
+$$i_t = \sigma( W_i . [h_{t-1} , x_t] + b_i )$$
 
 \widetilde{C_t} = tanh( W_c . [h_{t-1} , x_t] + b_c )
 
