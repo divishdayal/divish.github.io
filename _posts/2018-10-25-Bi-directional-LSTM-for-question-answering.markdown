@@ -2,7 +2,7 @@
 layout: post
 title: Bi-directional LSTM with attention for question answering (NLP)
 date: 2018-10-25
-excerpt : "description bla bla"
+excerpt : "Solving question answering(NLP task) with bi-directional LSTM, using attention mechanism and siamese network architecture."
 comments: true
 ---
 

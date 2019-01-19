@@ -2,7 +2,7 @@
 layout: post
 title: Convolutional Neural Networks (CNN) – Applications in NLP for Sentence Classification
 date: 2017-08-27
-excerpt : "bla bla"
+excerpt : "How to use CNN, widely used in computer vision, for NLP tasks - what are the use cases and how to use it for sentence classification tasks like sentiment analysis, question answer selection, etc."
 comments: true
 ---
 

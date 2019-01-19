@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with deep learning on TensorFlow
 date: 2018-01-15
-excerpt : "description bla bla"
+excerpt : "How to get familiar with the recent trends in data science and machine learning."
 comments: true
 ---
 
