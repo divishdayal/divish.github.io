@@ -1,8 +1,8 @@
 ---
 layout: post
-title: new post
+title: Convolutional Neural Networks (CNN) – Applications in NLP for Sentence Classification
 date: 2017-08-27
-excerpt : "Convolutional Neural Networks (CNN) – Applications in NLP for Sentence Classification"
+excerpt : "bla bla"
 comments: true
 ---
 
