@@ -22,25 +22,25 @@ The input gate layer in the first equation below is a sigmoid layer to decide wh
 
 $i_t = \sigma( W_i . [h_{t-1} , x_t] + b_i )$
 
-\widetilde{C_t} = tanh( W_c . [h_{t-1} , x_t] + b_c )
+$\widetilde{C_t} = tanh( W_c . [h_{t-1} , x_t] + b_c )$
 
 Then, in the equation above, we create a candidate new cell state content to be updated into the final cell state for the current time step.
 
 Forget Gate
 The forget gate has the function of deciding which information in the cell memory to keep, and which to forget.
-f_t = \sigma( W_f . [h_{t-1} , x_t] + b_f )
+$f_t = \sigma( W_f . [h_{t-1} , x_t] + b_f )$
 
 It looks at h_{t-1} and x_t to output a number between 0 and 1. A 1 would mean to keep all of it, and a 0 would mean to forget everything.
-C_t = f_t * C_{t-1} + i_t * \widetilde{C_t}
+$C_t = f_t * C_{t-1} + i_t * \widetilde{C_t}$
 
 In the above equation, we update the cell contents to new contents. Here, the forget gate f_t decides on how much of the old information is to be removed, and the input gate i_t determines the scale of addition of new candidate contents \widetilde{C_t} into the cell state.
 
 Output Gate
 The output gate layer decides the output at each time step. The output of the LSTM cell uses a sigmoid layer on inputs x_t and h_{t-1}. Updated output h_t is dependent on the updated cell state in the current time step C_t as shown in following equations.
 
-o_t = \sigma( W_o . [h_{t-1} , x_t] + b_o )
+$o_t = \sigma( W_o . [h_{t-1} , x_t] + b_o )$
 
-h_t = o_t * tanh(C_t)
+$h_t = o_t * tanh(C_t)$
 
 This structure of an LSTM helps it model the dependencies of previous inputs efficiently.
 Model Architecture – Components
@@ -65,15 +65,15 @@ The proposed model is shown in the following figure. As discussed above, the mod
 ![useful image]({{site.url}}/images/Bi-directional-LSTM-for-question-answering-2.jpg)
 
 At each time step, the bi-directional LSTM gives 2 outputs – one from the forward moving LSTM cell and another from the backward moving LSTM cell. For the model proposed here, we concatenate the two vector outputs at each time step. For each output h_a(t) of the Answer encoding bi-directional LSTM, attention of the average-pooled question vector o_q is applied using the following equations :
-m_{a,q}(t) = W_{am}h_a(t) + W_{qm}o_q
-s_{a,q}(t) = exp(W_{m,s}^Ttanh(m_{a,q}(t)))
-\tilde{h_a}(t) = h_a(t)s_{a,q}(t)
+$m_{a,q}(t) = W_{am}h_a(t) + W_{qm}o_q$
+$s_{a,q}(t) = exp(W_{m,s}^Ttanh(m_{a,q}(t)))$
+$\tilde{h_a}(t) = h_a(t)s_{a,q}(t)$
 
 In the above equations, \tilde{h_a}(t) is the updated output vector for answer sentences at a particular time step after applying attention using the above equations. As shown in the figure, o_q is the average pooled question vector, and \tilde{h_a}(t) is average pooled to obtain o_a, the answer vector.
 
 After obtaining the vectors for question and answer, we use cosine similarity measure to obtain the a value for a question answer pair. For training the model, cosine hinge loss function is used as shown below,
 
-L = max(0, m - s_{a+} + s_{a-})
+$L = max(0, m - s_{a+} + s_{a-})$
 
 In the above equation, m is the margin which is a hyper-parameter to be set for the model, s_{a+} is the cosine similarity score for the question and the positive labeled answer for a question, and s_{a-} is the score with a negative labeled answer. Essentially, we want to train the model to be able to produce a score at-least more than the margin value. Hence, at each iteration, the model consumes a question, with a correct answer and a wrong answer to calculate loss and back-propagate the loss to respective trainable components of the model.
 
