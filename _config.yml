@@ -6,6 +6,7 @@ baseurl: ""
 url: "http://divishdayal.github.io"
 twitter_username: dayalDivish
 github_username:  divishdayal
+linkedin_username: divishdayal
 
 # Build settings
 markdown: kramdown
