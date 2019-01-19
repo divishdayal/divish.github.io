@@ -424,3 +424,9 @@ a:visited { color: #205caa; }
     margin: 0 0 15px; }
 
 }
+
+/*index page styles*/
+.post-description{
+  color: #2c3e50;
+  font-size: 1em;
+}
