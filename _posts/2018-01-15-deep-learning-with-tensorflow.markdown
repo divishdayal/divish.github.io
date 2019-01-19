@@ -3,7 +3,7 @@ layout: post
 title: Getting started with deep learning on TensorFlow
 date: 2018-01-15
 excerpt : "How to get familiar with the recent trends in data science and machine learning."
-comments: true
+<!-- comments: true -->
 ---
 
 This post is about getting up to speed with the recent trends in data science. Deep learning has gained a lot of traction these days. It has showed remarkable improvements in almost every field – given the results do not need to be interpretable. The very reason deep learning works so good is that it can find features in the data automatically. But this also means that analysing these features that make the model work in a certain way is a difficult task.
