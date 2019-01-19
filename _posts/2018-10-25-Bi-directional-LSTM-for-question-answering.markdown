@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bi-directional LSTM with attention for question answering (NLP)
-date: 2016-03-18
+date: 2018-10-25
 excerpt : "description bla bla"
 comments: true
 ---
