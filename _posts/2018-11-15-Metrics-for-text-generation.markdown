@@ -18,9 +18,9 @@ I will first talk about some common terms occuring in the rest of the post. Firs
 	<li>Rouge : Recall Oriented Understudy for Gisting Evaluation</li>
 	Rouge, as mentioned earlier, is another widely reported metric. It is very common to be reported along with BLEU scores for standard tasks. It is almost same to BLEU definition, difference being Rouge is Recall focused whereas BLEU was precision focused. There are 3 types of Rouge : n-rouge, the most common rouge type which means n-gram overlap. eg.(2-rouge, 1-rouge). Second is l-rouge which checks for Longest Common Subsequence instead of n-gram overlap. Third is s-rouge which focuses on skip grams. Standard implementations of these can be found in most ML libraries.
 	<li>Perplexity</li>
-	Perplexity, another widely used metric, is used to give the highest Probability for the existence of a sentence to be produced by the model trained on a dataset. Lower the perplexity value, better the mdoel. Perplexity is normalised on the length of sentences.
-	$l=\frac{1} {m} \sum_{i=1}^{m} log p(Sentence_i)$ where m = number of words.
-	$Perplexity = 2^{-l}$
+	Perplexity, another widely used metric, is used to give the highest Probability for the existence of a sentence to be produced by the model trained on a dataset. Lower the perplexity value, better the mdoel. Perplexity is normalised on the length of sentences.<br>
+	$l=\frac{1} {m} \sum_{i=1}^{m} log p(Sentence_i)$ where m = number of words.<br>
+	$Perplexity = 2^{-l}$ <br>
 	If the model is completely dumb(worst possilbe), perplexity = |v| where v is the vocabulary.
 	<li>LSA : Latent Semantic Analysis</li>
 	LSA is used to calculate the semantic similarity of two texts based on words they contain. It uses word co-occurrence counts from a large corpus. It uses bag of words for doing it, which is word position independent. Unlike other metrics, it doesn't punish word choice variation.
