@@ -34,3 +34,8 @@ METEOR works on word alignments. It computes one to one mapping of words in gene
 TER checks for the absolute conversion of the generated text to target text. 
 $TER = \frac{number-of-edits} {word-length-of-Reference-text}$
 TER works upon exact word matching. It help understand the absolute similarity among the reference and generated texts. 
+
+<br>
+<br>
+
+These are all the generally used metrics used for NLG evaluations. You can read up more about them online if you need a more comprehensive explanation. I have written a python file to compute these metrics which can be found <a href="https://github.com/divishdayal/divishdayal.github.io/blob/master/assests/codes/evaluation_metrics.py">here</a>.
