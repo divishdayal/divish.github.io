@@ -22,4 +22,4 @@ I will first talk about some common terms occuring in the rest of the post. Firs
 	<li>METEOR : Metric for Evaluation of Translation with Explicit Ordering</li>
 	<li>TER : Translation Edit Rate </li>
 	TER checks for the absolute conversion of the generated text to target text. 
-	$TER = \frac({number of edits} {word length of Reference text})$
+	$TER = \frac{number of edits} {word length of Reference text}$
