@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Metrics for Text Generation Model Evaluations
+title: Metrics for Automatic Evaluation of Text Generation Models
 date: 2018-11-15
 excerpt : "An introduction to automatic evaluation metrics that are generally used in Natural Language Generation to meausure model quality."
 <!-- comments: true -->
