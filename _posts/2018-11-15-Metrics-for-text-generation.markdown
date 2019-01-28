@@ -21,6 +21,7 @@ I will first talk about some common terms occuring in the rest of the post. Firs
 	Perplexity, another widely used metric, is used to give the highest Probability for the existence of a sentence to be produced by the model trained on a dataset. Lower the perplexity value, better the mdoel. Perplexity is normalised on the length of sentences.
 	$l=\frac{1} {m} \sum_{i=1}^{m} log p(Sentence_i)$ where m = number of words.
 	$Perplexity = 2^{-l}$
+	If the model is completely dumb(worst possilbe), perplexity = |v| where v is the vocabulary.
 	<li>LSA : Latent Semantic Analysis</li>
 	LSA is used to calculate the semantic similarity of two texts based on words they contain. It uses word co-occurrence counts from a large corpus. It uses bag of words for doing it, which is word position independent. Unlike other metrics, it doesn't punish word choice variation.
 	<li>METEOR : Metric for Evaluation of Translation with Explicit Ordering</li>
