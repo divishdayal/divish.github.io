@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tensor2Tensor : Directory structure and Organisation. 
-date: 2018-11-15
+date: 2019-01-13
 excerpt : "An opensource deep learning library in Tensorflow by Google. It contains implementations of commonly used models as well as advanced research models like Transformer."
 <!-- comments: true -->
 ---
